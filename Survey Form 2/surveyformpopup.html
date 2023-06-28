@@ -1,0 +1,24 @@
+<!DOCtype html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css" />
+    </head>
+<html>
+    <head>
+        <script language="javascript">
+            function copyform() {
+                opener.document.hiddenform.mytextfield.value = document.popupform.mytextfield.value;
+                opener.document.hiddenform.submit();
+                window.close();
+                return false;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="popupform" onsubmit="return copyform()">
+            <input type="text" name="mytextfield">
+            <input type="button" value="submit" onclick="copyform()">
+        </form>
+    </body>
+</html>

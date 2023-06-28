@@ -1,0 +1,116 @@
+<!DOCtype html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Anime Servey</title>
+  </head>
+  <body>
+    <h1 id="title">Anime Survey</h1>
+    <p id="description">We love to know what you think</p>
+    <form id="survey-form" name="form1">
+    <fieldset>
+      <label for="name-label" id="name-label">Name</label>
+      <input type="text" id="name" name="text1" required>
+      <label for="email-label"  id="email-label">Email</label>
+      <input type="email"  id="email" required>
+      <label for="number-label" id="number-label">Age</label>
+      <input type="text"  min="15" max="50" id="number" required>  
+      <label for="sex"> <input id="sex" type="radio" name="sex" required value="sex" class="inline">Male</label>
+      <label for="sex"> <input id="sex" type="radio" name="sex" required value="sex" class="inline">Female</label>
+    </fieldset>
+    <fieldset>
+      <label>Where do you stream anime?
+        <select id="dropdown">
+          <option>Select one please</option>
+          <option>Crunchyroll</option>
+          <option>HiDive</option>
+          <option>Youtube</option>
+          </select>
+      </label>
+      <label>How many hours of anime do you watch?
+        <select>
+          <option>Select one please</option>
+          <option>1-2 hours</option>
+          <option>3-4 hours</option>
+          <option>5-6 hours</option>
+          <option>I binge the whole series</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <label> What genre of anime do you like to watch?</label>
+      <label for="Comedy"><input id="Comedy" type="checkbox" name="anime-type"  class="inline" value="Comedy">Comedy</label>
+      <label for="Sci-Fi"><input id="Sci-Fi" type="checkbox" name="anime-type"  class="inline" value="Sci-Fi">Sci-Fi</label>
+      <label for="Fantasy"><input id="Fantasy" type="checkbox" name="anime-type"  class="inline" value="Fantasy">Fantasy</label>
+      <label for="Action/Adventure"><input id="Action/Adventure" type="checkbox" name="anime-type"  class="inline" value="Action/Adventure">Action/Adventure</label>
+    </fieldset>
+    <fieldset>
+      <label>What other genre of anime would you like to watch? (optional):
+        <textarea id ="bio" rows="3" cols="30" placeholder="Zombie anime..."></textarea>
+      </label>
+    </fieldset> 
+    <!-- <input id="submit" type="submit" value="Submit" /> -->
+    </form>
+    
+    <div class="popup" id="popup">
+      <p>Thank you for taking this survey!</p>
+      <a href="#" onclick="hide('popup')">Close</a>
+    </div>
+
+
+
+    <button id="submit" class="button" href="#" value="Submit" onclick="enable('popup')">Submit</button>
+  
+    
+
+    <script>
+      $ = function(id) {
+        return document.getElementById(id);
+      }
+      var enable = function(id) {
+        var isValid = required()
+        if (isValid) {
+          $(id).style.display ='block';
+        } else {
+          alert("please fill in the empty fields");
+        }
+        
+      }
+      var hide = function(id) {
+        $(id).style.display ='none';
+      }
+    </script>
+
+    <script>
+      function required()
+      {
+        var empt = document.form1.text1.value;
+        if (empt == '')
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+    </script>
+
+
+    <!-- <script>
+      function required(inputtx) 
+       {
+         if (inputtx.value.length == 0)
+          { 
+             alert("please enter field");  	
+             return false; 
+          }  	
+          return true; 
+        } 
+    </script> -->
+  </body>
+
+ <!--  placeholder="Enter first name"
+  placeholder="Enter your email"
+  placeholder="Enter your age" -->

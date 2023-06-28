@@ -1,0 +1,55 @@
+<!DOCtype html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Shooting Range Survey</title>
+  </head>
+  <body>
+    <h1 id="title">Shooting Range Survey</h1>
+    <p id="description">We love to know what you think</p>
+    <form id="survey-form">
+    <fieldset>
+      <label for="name-label" id="name-label">Name</label>
+      <input placeholder="Enter first name" id="name" type="text" name="name" required></label>
+      <label for="email-label" id="email-label">Email</label>
+      <input type="email" placeholder="Enter your email" id="email" required>
+      <label for="number-label" id="number-label">Age</label>
+      <input type="number" placeholder="Enter your age" min="10" max="90" id="number" required>
+      <label for="sex"> </label> <input id="sex" type="radio" name="sex" required value="sex">Male</label>
+      <label for="sex"> </label> <input id="sex" type="radio" name="sex" required value="sex">Female</label>
+    </fieldset>
+    <fieldset>
+      <label>Where have you heard about us?
+        <select id="dropdown">
+          <option>Select one please</option>
+          <option>Google</option>
+          <option>Friend</option>
+          <option>TV Commercial</option>
+          </select>
+      </label>
+      </label>
+      <label>What are you training for
+        <select>
+          <option>Select one please</option>
+          <option>Military</option>
+          <option>Law enforcement</option>
+          <option>Recreation</option>
+          <option>Competition</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <label> What type of guns do you usually shoot?</label>
+      <label for="9mm"><input id="9mm" type="checkbox" name="bullet-type" required class="inline" value="9mm">9mm</label>
+      <label for=".45 ACP"><input id=".45 ACP" type="checkbox" name="bullet-type" required class="inline" value=".45 ACP">.45 ACP</label>
+      <label for="5.56"><input id="5.56" type="checkbox" name="bullet-type" required class="inline" value="5.56">5.56</label>
+      <label for="7.62"><input id="7.62" type="checkbox" name="bullet-type" required class="inline" value="7.62">7.62</label>
+    </fieldset>
+    <fieldset>
+      <label>What can we change? (optional):
+        <textarea id ="bio" rows="3" cols="30" placeholder="The bathrooms need more TP..."></textarea>
+      </label>
+    </fieldset>
+    <input id="submit" type="submit" value="Submit" />
+  </body>
